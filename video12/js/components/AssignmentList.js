@@ -14,8 +14,8 @@ export default {
         <div v-show="filteredAssignments.length" class="assignment-card"> 
             <Tags 
                 :initialTags="assignments.map(a=>a.tag)" 
-                @selected="currentTag = $event;" 
-                :currentTag="currentTag"/>   
+                v-model="currentTag"
+                />   
             <section >
                 <h2 class="font-bold mb-2">{{title }}({{filteredAssignments.length}})</h2>
                 <ul class="border border-gray-600 divide-y divide-gray-600">
